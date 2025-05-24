@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.spec
+dist/
+build/
+*.exe
