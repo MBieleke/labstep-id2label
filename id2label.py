@@ -120,8 +120,8 @@ padding = 40
 
 try:
     font_header = ImageFont.truetype("arialbd.ttf", 46)
-    font_label = ImageFont.truetype("arialbd.ttf", 52)
-    font_location = ImageFont.truetype("arial.ttf", 40)
+    font_label = ImageFont.truetype("arialbd.ttf", 56)
+    font_location = ImageFont.truetype("arial.ttf", 46)
 except:
     font_header = ImageFont.load_default()
     font_label = ImageFont.load_default()
