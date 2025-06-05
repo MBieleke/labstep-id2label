@@ -147,8 +147,9 @@ for resource_id in resource_ids:
         except:
             invalid_ids.append(resource_id)
             continue
-
-    qr_img = qrcode.make(guid).convert("RGB")
+    
+    qr_url = f"https://app.labstep.com/perma-link/{guid}"
+    qr_img = qrcode.make(qr_url).convert("RGB")
     qr_img = qr_img.resize((qr_size, qr_size), resample=Image.LANCZOS)
 
     label_img = Image.new("RGBA", (canvas_size, canvas_size), "white")
