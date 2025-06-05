@@ -141,7 +141,9 @@ for resource_id in resource_ids:
             resource = user.getResource(resource_id)
             name = resource.name
             guid = resource.guid
-            location = resource.resource_location.get("location_path") if hasattr(resource, 'resource_location') and resource.resource_location else "No location"
+            items = resource.getItems()
+            locations = list({item.resource_location.get("location_path") for item in items if item.resource_location})
+            location = "; ".join(locations) if locations else "No location"
         except:
             invalid_ids.append(resource_id)
             continue
